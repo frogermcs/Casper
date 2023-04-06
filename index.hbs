@@ -52,7 +52,7 @@ into the {body} of the default.hbs template --}}
 
     <h1 class="">Life &#38; leadership</h1>
     <div class="post-feed">
-        {{#get "posts" limit="3" filter="featured:false+filter=tag:life-leadership"}}
+        {{#get "posts" limit="3" filter="featured:false+tag:life-leadership"}}
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
@@ -65,7 +65,7 @@ into the {body} of the default.hbs template --}}
 
     <h1 class="">Leadership one-bites</h1>
     <div class="post-feed">
-        {{#get "posts" limit="6" filter="featured:false+filter=tag:one-bites"}}
+        {{#get "posts" limit="6" filter="featured:false+tag:one-bites"}}
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
