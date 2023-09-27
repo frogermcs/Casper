@@ -49,46 +49,5 @@ into the {body} of the default.hbs template --}}
         {{/get}}
     </div>
     <hr>
-
-    <h1 class="">Premium content</h1>
-    <div class="post-feed">
-        {{#get "posts" limit="3" filter="featured:false+tag:products"}}
-            {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/foreach}}
-        {{/get}}
-    </div>
-    <nav class="pagination">
-        <a class="older-posts" href="/products/">All products<span aria-hidden="true">→</span></a>
-    </nav>
-
-    <h1 class="">Life &#38; leadership</h1>
-    <div class="post-feed">
-        {{#get "posts" limit="3" filter="featured:false+tag:life-leadership"}}
-            {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/foreach}}
-        {{/get}}
-    </div>
-    <nav class="pagination">
-        <a class="older-posts" href="/tag/life-leadership/">More posts<span aria-hidden="true">→</span></a>
-    </nav>
-
-    <h1 class="">Leadership one-bites</h1>
-    <div class="post-feed">
-        {{#get "posts" limit="6" filter="featured:false+tag:one-bites"}}
-            {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/foreach}}
-        {{/get}}
-    </div>
-    <nav class="pagination">
-        <a class="older-posts" href="/tag/one-bites/">More posts<span aria-hidden="true">→</span></a>
-    </nav>
-    {{!-- {{pagination}} --}}
-
 </div>
 </main>
