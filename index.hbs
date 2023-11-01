@@ -49,5 +49,20 @@ into the {body} of the default.hbs template --}}
         {{/get}}
     </div>
     <hr>
+
+    <h1 class="">Latest</h1>
+    <div class="post-feed">
+        {{#get "posts" limit="6" filter="featured:false"}}
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+    <nav class="pagination">
+        <a class="older-posts" href="/tips-for-leaders/">Read all<span aria-hidden="true">→</span></a>
+    </nav>
+    {{!-- {{pagination}} --}}
+
 </div>
 </main>
